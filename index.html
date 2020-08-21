@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Emmet &amp; Sass Coding for Web Creators</title>
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body>
+  <header>
+    <h1>Emmet &amp; Sass Coding for Web Creators</h1>
+  </header>
+  <h3>はじめに</h3>
+  <p>このコンテンツはWeb制作者がHTMLとCSSをコーディングする際に、<br /> コードを素早く効率的に書くことが出来る拡張機能（プラグイン）であるEmmet（エメット）、
+    <br />及びCSSを効率的に記述するためのスタイルシート言語であるSass（サース）について解説するものです。
+  </p>
+  <h3 id="tableOfContents">目次</h3>
+  <nav>
+    <ul>
+      <li>
+        <a href="#aboutEmmet">Emmetについて</a></li>
+      <li>
+        <a href="#aboutSass">Sassについて</a></li>
+      <li>
+        <a href="#recomendSourceCodeEditor">エディタについて</a></li>
+      <li>
+        <a href="#emmetsettingForJapanese">Visual Studio Codeの設定</a></li>
+      <li>
+        <a href="#emmetUsageExample">Emmetの使用例</a></li>
+      <li>
+        <a href="#installLiveSassCompiler">Live Sass Compilerのインストール</a></li>
+      <li>
+        <a href="#sassDescriptionSample">Sassの記述見本</a></li>
+      <li>
+        <a href="#emmetReverseLookup">Emmet逆引き</a></li>
+      <li>
+        <a href="#cssPropertiesColorKeywords">CSS プロパティ カラーネーム</a></li>
+  </nav>
+  <article>
+    <h3 id="aboutEmmet">Emmetについて</h3>
+    <p>EmmetとはHTMLやCSSなどを記述する際に単純な形式の記述を展開することによって素早く編集することができる、ソースコードエディタ用のプラグインです。<br /> また、エディタによっては初めからEmmetが組み込まれているものもあります。
+      <br /><br /> 具体的な例を一つ紹介します。<br />
+    </p>
+    <p>エディタで次のコードを記述してEnter（エディタによってはTab）キーを押すと、</p>
+    <pre><code>div#page&lt;div+ul&lt;li*5a</code></pre>
+    <p>次のHTMLに展開されます。</p>
+    <pre><code>&lt;div id="page"&gt;
+  &lt;div&gt;&lt;/div&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;&gt;li&gt;
+    &lt;li&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;&gt;li&gt;
+    &lt;li&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;&gt;li&gt;
+    &lt;li&gt;&lt;a href="">&lt;&gt;a&gt;&lt;&gt;li&gt;
+    &lt;li&gt;&lt;a href="">&lt;&gt;a&gt;&lt;&gt;li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;</code>
+</pre>
+    <a href="#tableOfContents">目次へ戻る</a>
+    <h3 id="aboutSass">Sassについて</h3>
+    <p>Sass(サース、サス)：<strong>S</strong>yntactically <strong>A</strong>wesome <strong>S</strong>tyle <strong>s</strong>heets（構文的に素晴らしいスタイルシート）とは、<br />CSSを効率的に書くことができるスタイルシート言語です。</p>
+    <p>Sassの発音は、設計者であるハンプトン・キャトリンさんご本人の動画を参照ください。<a href="https://www.youtube.com/watch?v=MFwId6xSh2o">The Future of Sass by Hampton Catlin</a></p>
+    <a href="#tableOfContents">目次へ戻る</a>
+    <h3 id="recomendSourceCodeEditor">エディタについて</h3>
+    <p>Emmetは様々なソースコードエディタにインストール出来るプラグインが用意されています。<br /><a href="https://emmet.io/download/">Emmetプラグインのダウンロードサイト</a><br />Visual Studio Code（通称VSCode）には標準でEmmetが組み込まれています。<br /> VSCodeは人気のあるテキストエディタの中で使い心地がよく筆者が愛用している、
+      <br /> というだけなので素晴らしいEmmet対応のソースコードエディタは他にもあります。<br> 現在人気のあるEmmet対応のソースコードエディタを二つ挙げます。
+      <br> リンク先からダウンロードすることが出来ます。
+      <br>
+    </p>
+    <ul>
+      <li><a href="https://code.visualstudio.com/download">Visual Studio Code</a></li>
+      <li><a href="https://atom.io/">Atom</a></li>
+    </ul>
+    <p>また、伝統的なテキストエディタには<a href="https://www.vim.org/download.php">Vim</a>、そして<a href="https://www.gnu.org/software/emacs/download.html">Emacs</a>がありますが、<br> このどちらかのエディタを使いこなしておられる方は、このコンテンツで学ぶことは何もないでしょう。
+      <br>
+    </p>
+    <br />
+    <br />
+    <a href="#tableOfContents">目次へ戻る</a>
+    <h3 id="emmetSettingForJapanese">Emmetの設定</h3>
+    <a href="#tableOfContents">目次へ戻る</a>
+    <h3 id="emmetUsageExample">Emmetの使用例</h3>
+    <a href="#tableOfContents">目次へ戻る</a>
+    <h3 id="installLiveSassCompiler">Live SASS Compilerのインストール</h3>
+    <a href="#tableOfContents">目次へ戻る</a>
+    <h3 id="sassDescriptionSample">SASSの記述見本</h3>
+    <a href="#tableOfContents">目次へ戻る</a>
+    <h3 id="emmetReverseLookup">Emmet逆引き</h3>
+    <a href="#tableOfContents">目次へ戻る</a>
+    <h3 id="cssPropertiesColorKeywords">CSS プロパティ カラーネーム</h3>
+    <h4>基本色</h4>
+    <h4>拡張色</h4>
+    <a href="#tableOfContents">目次へ戻る</a>
+  </article>
+
+  <footer>
+    <address><a href="mailto:hiroyasu.kameo@email.com">Hiroyasu Kameo</a></address>
+    <p><small>Copyright&copy; 2020　Hiroyasu Kameo, All Rights Reserved.</small></p>
+  </footer>
+</body>
+
+</html>

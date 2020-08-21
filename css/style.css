@@ -1,0 +1,21 @@
+@charset "UTF-8";
+
+body{
+  background-image: url(../img/paper.jpg);
+}
+h1{
+  color: royalblue;
+}
+div{
+  color: darkcyan;
+}
+h3{
+  color: chocolate;
+}
+ul{
+  color: darkcyan;
+}
+h4{
+  color: teal;
+  text-indent: 2em;
+}
