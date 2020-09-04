@@ -12,8 +12,8 @@
     <h1>Emmet &amp; Sass Coding for Web Creators</h1>
   </header>
   <h3>はじめに</h3>
-  <p>このコンテンツはWeb制作者がHTMLとCSSをコーディングする際に、<br /> コードを素早く効率的に書くことが出来る拡張機能（プラグイン）であるEmmet（エメット）、
-    <br />及びCSSを効率的に記述するためのスタイルシート言語であるSass（サース）について解説するものです。
+  <p>このコンテンツはWeb制作者がコーディングする際にとても便利な、<br /> HTMLとCSSを素早く効率的に書くことが出来る拡張機能（プラグイン）であるEmmet（エメット）、
+    <br /> そしてCSSを効率的に記述するためのスタイルシート言語であるSass（サース）について解説するものです。
   </p>
   <h3 id="tableOfContents">目次</h3>
   <nav>
@@ -21,13 +21,11 @@
       <li>
         <a href="#aboutEmmet">Emmetについて</a></li>
       <li>
-        <a href="#aboutSass">Sassについて</a></li>
-      <li>
         <a href="#recomendSourceCodeEditor">エディタについて</a></li>
       <li>
-        <a href="#emmetsettingForJapanese">Visual Studio Codeの設定</a></li>
+        <a href="#emmetsettingForJapanese">ソースコードエディタのインストールとEmmetの設定</a></li>
       <li>
-        <a href="#emmetUsageExample">Emmetの使用例</a></li>
+        <a href="#aboutSass">Sassについて</a></li>
       <li>
         <a href="#installLiveSassCompiler">Live Sass Compilerのインストール</a></li>
       <li>
@@ -39,13 +37,17 @@
   </nav>
   <article>
     <h3 id="aboutEmmet">Emmetについて</h3>
-    <p>EmmetとはHTMLやCSSなどを記述する際に単純な形式の記述を展開することによって素早く編集することができる、ソースコードエディタ用のプラグインです。<br /> また、エディタによっては初めからEmmetが組み込まれているものもあります。
-      <br /><br /> 具体的な例を一つ紹介します。<br />
+    <p>EmmetとはHTMLやCSSなどを記述する際に単純な形式の記述を展開することによって素早く編集することができる、ソースコードエディタ用のプラグインです。<br /> また、エディタによっては初めからEmmetが組み込まれているものもあります。<br />
+      <a href="https://emmet.io/">Emmet公式サイト</a>
+      <br />
+      <br /> Emmetの具体的な例を二つ紹介します。<br />
     </p>
-    <p>エディタで次のコードを記述してEnter（エディタによってはTab）キーを押すと、</p>
-    <pre><code>div#page&lt;div+ul&lt;li*5a</code></pre>
-    <p>次のHTMLに展開されます。</p>
-    <pre><code>&lt;div id="page"&gt;
+    <ul>
+      <li>
+        <p>エディタの<b>HTML編集モード</b>で次のコードを記述してEnter（エディタによってはTab）キーを押すと、</p>
+        <pre><code>div#page&gt;div+ul&gt;li*5a</code></pre>
+        <p>次のHTMLに展開されます。</pre>
+          <pre><code>&lt;div id="page"&gt;
   &lt;div&gt;&lt;/div&gt;
   &lt;ul&gt;
     &lt;li&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;&gt;li&gt;
@@ -55,15 +57,30 @@
     &lt;li&gt;&lt;a href="">&lt;&gt;a&gt;&lt;&gt;li&gt;
   &lt;/ul&gt;
 &lt;/div&gt;</code>
-</pre>
-    <a href="#tableOfContents">目次へ戻る</a>
-    <h3 id="aboutSass">Sassについて</h3>
-    <p>Sass(サース、サス)：<strong>S</strong>yntactically <strong>A</strong>wesome <strong>S</strong>tyle <strong>s</strong>heets（構文的に素晴らしいスタイルシート）とは、<br />CSSを効率的に書くことができるスタイルシート言語です。</p>
-    <p>Sassの発音は、設計者であるハンプトン・キャトリンさんご本人の動画を参照ください。<a href="https://www.youtube.com/watch?v=MFwId6xSh2o">The Future of Sass by Hampton Catlin</a></p>
-    <a href="#tableOfContents">目次へ戻る</a>
+</pre><br></li>
+      <li>
+        <p>エディタの<b>HTML編集モード</b>で次のコードを記述してEnter（エディタによってはTab）キーを押すと、</p>
+        <pre><code>!</code></pre>
+        <p>次のHTMLに展開されます。</pre>
+          <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;Document&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+      </li>
+    </ul><br>
+    <p class="back"><a href="#tableOfContents">目次へ戻る</a></p><br>
     <h3 id="recomendSourceCodeEditor">エディタについて</h3>
-    <p>Emmetは様々なソースコードエディタにインストール出来るプラグインが用意されています。<br /><a href="https://emmet.io/download/">Emmetプラグインのダウンロードサイト</a><br />Visual Studio Code（通称VSCode）には標準でEmmetが組み込まれています。<br /> VSCodeは人気のあるテキストエディタの中で使い心地がよく筆者が愛用している、
-      <br /> というだけなので素晴らしいEmmet対応のソースコードエディタは他にもあります。<br> 現在人気のあるEmmet対応のソースコードエディタを二つ挙げます。
+    <p>Emmetは様々なソースコードエディタにインストール出来るプラグインが用意されています。<br />
+      <a href="https://emmet.io/download/">Emmetプラグインのダウンロードサイト</a><br /> Visual Studio Code（通称VSCode）には標準でEmmetが組み込まれています。<br /> VSCodeは人気のあるソースコードエディタの中で使い心地がよく筆者が愛用している、
+      <br /> というだけなので素晴らしいEmmet対応のソースコードエディタは他にもあります。
+      <br> ここでは現在人気のあるEmmet対応のソースコードエディタを二つ挙げます。
       <br> リンク先からダウンロードすることが出来ます。
       <br>
     </p>
@@ -71,26 +88,58 @@
       <li><a href="https://code.visualstudio.com/download">Visual Studio Code</a></li>
       <li><a href="https://atom.io/">Atom</a></li>
     </ul>
-    <p>また、伝統的なテキストエディタには<a href="https://www.vim.org/download.php">Vim</a>、そして<a href="https://www.gnu.org/software/emacs/download.html">Emacs</a>がありますが、<br> このどちらかのエディタを使いこなしておられる方は、このコンテンツで学ぶことは何もないでしょう。
-      <br>
+    <!-- 
+    <p>また、伝統的なソースコードエディタには<a href="https://www.vim.org/download.php">Vim</a>、そして<a href="https://www.gnu.org/software/emacs/download.html">Emacs</a>がありますが、<br> このどちらかのエディタを使いこなしておられる方は、このコンテンツで学ぶことは何もないでしょう。<br>
     </p>
+    -->
     <br />
     <br />
-    <a href="#tableOfContents">目次へ戻る</a>
-    <h3 id="emmetSettingForJapanese">Emmetの設定</h3>
-    <a href="#tableOfContents">目次へ戻る</a>
-    <h3 id="emmetUsageExample">Emmetの使用例</h3>
-    <a href="#tableOfContents">目次へ戻る</a>
+    <p class="back"><a href="#tableOfContents">目次へ戻る</a></p>
+    <h3 id="emmetSettingForJapanese">ソースコードエディタのインストールとEmmetの設定</h3>
+    <ul>
+      <li>Visual Studio Code</li>
+      <ol>
+        <li>インストール</li>
+        <a href="https://code.visualstudio.com/download">Visual Studio Code</a><br>
+        <li>Emmetのlang設定</li>
+      </ol>
+      <br>
+      <li>Atom</li>
+      <ol>
+        <li>インストール</li>
+        次のリンク先からあなたがお使いのOSにあったファイルをダウンロードすることが出来ます。
+        <br>
+        <a href="https://atom.io/">Atom</a><br> Windowsの場合は、Setup.exeを実行するとインストールが開始されます。
+        <br>
+        <li>AtomにEmmetのプラグインをインストール</li>
+        <li>Emmetのlang設定</li>
+      </ol><br>
+    </ul>
+    <p class="back"><a href="#tableOfContents">目次へ戻る</a></p><br>
+    <section>
+      <h3 id="aboutSass">Sassについて</h3>
+      <p>Sass(サース、サス)：<strong>S</strong>yntactically <strong>A</strong>wesome <strong>S</strong>tyle <strong>s</strong>heets（構文的に素晴らしいスタイルシート）とは、<br />CSSを効率的に書くことができるCSS拡張<a href="https://ja.wikipedia.org/wiki/メタ言語">メタ言語</a>です。</p>
+      <p>Sassの発音は、設計者であるハンプトン・キャトリンさんご本人の動画を参照ください。<br /><a href="https://www.youtube.com/watch?v=MFwId6xSh2o">The Future of Sass by Hampton Catlin</a></p>
+      <p class="back"><a href="#tableOfContents">目次へ戻る</a></p><br>
+    </section>
     <h3 id="installLiveSassCompiler">Live SASS Compilerのインストール</h3>
-    <a href="#tableOfContents">目次へ戻る</a>
+    <p class="back"><a href="#tableOfContents">目次へ戻る</a></p><br>
     <h3 id="sassDescriptionSample">SASSの記述見本</h3>
-    <a href="#tableOfContents">目次へ戻る</a>
+    <p class="back"><a href="#tableOfContents">目次へ戻る</a></p><br>
     <h3 id="emmetReverseLookup">Emmet逆引き</h3>
-    <a href="#tableOfContents">目次へ戻る</a>
-    <h3 id="cssPropertiesColorKeywords">CSS プロパティ カラーネーム</h3>
-    <h4>基本色</h4>
-    <h4>拡張色</h4>
-    <a href="#tableOfContents">目次へ戻る</a>
+    <p class="back"><a href="#tableOfContents">目次へ戻る</a></p><br>
+    <section>
+      <h3 id="cssPropertiesColorKeywords">CSS プロパティ カラーネーム</h3>
+
+      <section>
+        <h4>基本色</h4>
+      </section>
+      <section>
+        <h4>拡張色</h4>
+      </section>
+
+      <p class="back"><a href="#tableOfContents">目次へ戻る</a></p><br>
+    </section>
   </article>
 
   <footer>
