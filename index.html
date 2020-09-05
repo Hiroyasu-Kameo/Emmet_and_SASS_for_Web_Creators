@@ -12,8 +12,10 @@
     <h1>Emmet &amp; Sass Coding for Web Creators</h1>
   </header>
   <h3>はじめに</h3>
-  <p>このコンテンツはWeb制作者がコーディングする際にとても便利な、<br /> HTMLとCSSを素早く効率的に書くことが出来る拡張機能（プラグイン）であるEmmet（エメット）、
-    <br /> そしてCSSを効率的に記述するためのスタイルシート言語であるSass（サース）について解説するものです。
+  <p>このホームページはWeb制作者がmacOSまたはWindows上でコーディングする際にとても便利な、<br /> HTMLとCSSを素早く効率的に書くことが出来るコーディングエディタの拡張機能（プラグイン）であるEmmet（エメット）、
+    <br /> そしてCSSを効率的に記述するためのスタイルシート言語であるSass（サース）について解説するものです。<br /><br />
+    専門的と思われる語句の説明には<a href="https://ja.m.wikipedia.org/wiki/%E3%82%A6%E3%82%A3%E3%82%AD%E3%83%9A%E3%83%87%E3%82%A3%E3%82%A2
+    ">ウィキペディア</a>へのリンクを貼ってあります。
   </p>
   <h3 id="tableOfContents">目次</h3>
   <nav>
@@ -21,9 +23,9 @@
       <li>
         <a href="#aboutEmmet">Emmetについて</a></li>
       <li>
-        <a href="#recomendSourceCodeEditor">エディタについて</a></li>
+        <a href="#recomendSourceCodeEditor">ソースコードエディタについて</a></li>
       <li>
-        <a href="#emmetsettingForJapanese">ソースコードエディタのインストールとEmmetの設定</a></li>
+        <a href="#emmetSettingForJapanese">ソースコードエディタのインストールとEmmetの設定</a></li>
       <li>
         <a href="#aboutSass">Sassについて</a></li>
       <li>
@@ -45,7 +47,7 @@
     <ul>
       <li>
         <p>エディタの<b>HTML編集モード</b>で次のコードを記述してEnter（エディタによってはTab）キーを押すと、</p>
-        <pre><code>div#page&gt;div+ul&gt;li*5a</code></pre>
+        <pre><code>div#page&gt;div+ul&gt;li*5&gt;a</code></pre>
         <p>次のHTMLに展開されます。</pre>
           <pre><code>&lt;div id="page"&gt;
   &lt;div&gt;&lt;/div&gt;
@@ -76,45 +78,64 @@
       </li>
     </ul><br>
     <p class="back"><a href="#tableOfContents">目次へ戻る</a></p><br>
-    <h3 id="recomendSourceCodeEditor">エディタについて</h3>
+    <h3 id="recomendSourceCodeEditor">ソースコードエディタについて</h3>
+    <p><a href="https://ja.m.wikipedia.org/wiki/%E3%82%BD%E3%83%BC%E3%82%B9%E3%82%B3%E3%83%BC%E3%83%89%E3%82%A8%E3%83%87%E3%82%A3%E3%82%BF">ソースコードエディタ</a>とは、プログラマがプログラムのソースコードを編集することを目的として設計されたテキストエディタプログラムです。</p>
     <p>Emmetは様々なソースコードエディタにインストール出来るプラグインが用意されています。<br />
-      <a href="https://emmet.io/download/">Emmetプラグインのダウンロードサイト</a><br /> Visual Studio Code（通称VSCode）には標準でEmmetが組み込まれています。<br /> VSCodeは人気のあるソースコードエディタの中で使い心地がよく筆者が愛用している、
+      <a href="https://emmet.io/download/">Emmetプラグインのダウンロードページ</a><br /> Visual Studio Code（通称VSCode）には標準でEmmetが組み込まれています。<br /> 
+      ここからはVisual Studio Codeを使用して説明を進めていきます。<br />
+      VSCodeは人気のあるソースコードエディタの中で使い心地がよく筆者が愛用している、
       <br /> というだけなので素晴らしいEmmet対応のソースコードエディタは他にもあります。
-      <br> ここでは現在人気のあるEmmet対応のソースコードエディタを二つ挙げます。
-      <br> リンク先からダウンロードすることが出来ます。
+      <br> 現在人気のあるEmmet対応のソースコードエディタの中で無料のものを３つ挙げます。<br />
+      ３つともmacOS、Windows、Linuxで使用することが出来ます。
       <br>
     </p>
     <ul>
-      <li><a href="https://code.visualstudio.com/download">Visual Studio Code</a></li>
-      <li><a href="https://atom.io/">Atom</a></li>
+      <li>Visual Studio Code</li>
+      <p>Microsoftが開発したソースコードエディタです。</p><br />
+      <li>Atom</li>
+      <p><a href="https://ja.m.wikipedia.org/wiki/GitHub">GitHub</a>が開発したオープンソースのテキストエディタです。<br />       
+      </p><br />
+      <li>Brackets</li>
+      <p>Adobe Systemsが開発するオープンソースのソースコードエディタです。<br />
+      </p><br />
     </ul>
-    <!-- 
+<!-- 
     <p>また、伝統的なソースコードエディタには<a href="https://www.vim.org/download.php">Vim</a>、そして<a href="https://www.gnu.org/software/emacs/download.html">Emacs</a>がありますが、<br> このどちらかのエディタを使いこなしておられる方は、このコンテンツで学ぶことは何もないでしょう。<br>
     </p>
     -->
     <br />
     <br />
     <p class="back"><a href="#tableOfContents">目次へ戻る</a></p>
-    <h3 id="emmetSettingForJapanese">ソースコードエディタのインストールとEmmetの設定</h3>
-    <ul>
-      <li>Visual Studio Code</li>
-      <ol>
+    <h3 id="emmetSettingForJapanese">Visual Studio CodeのインストールとEmmetの設定</h3>
+      <ol type = "1">
         <li>インストール</li>
         <a href="https://code.visualstudio.com/download">Visual Studio Code</a><br>
         <li>Emmetのlang設定</li>
       </ol>
       <br>
-      <li>Atom</li>
-      <ol>
+      <!-- 
+        <li>Atom</li>
+      <ol type = "1">
         <li>インストール</li>
         次のリンク先からあなたがお使いのOSにあったファイルをダウンロードすることが出来ます。
         <br>
         <a href="https://atom.io/">Atom</a><br> Windowsの場合は、Setup.exeを実行するとインストールが開始されます。
         <br>
         <li>AtomにEmmetのプラグインをインストール</li>
+        <p>アプリケーションフォルダの中のユーティリティフォルダを開き、ターミナルを起動します。<br />
+          Emmetのプラグインをインストールする前にhomebrewをインストールします。<br />
+          以下のコマンドを入力（またはコピー＆ペースト）してリターンキーを押します。<br />
+          /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"<br />
+          
+          以下のコマンドを一行ずつ入力（またはコピー＆ペースト）、リターンキーを押していきます。<br />
+          cd ~/.atom/packages<br />
+          git clone https://github.com/emmetio/emmet-atom
+          cd emmet-atom<br />
+          npm install ※macOS Catalina zsh<br />
+        </p>
         <li>Emmetのlang設定</li>
       </ol><br>
-    </ul>
+      -->
     <p class="back"><a href="#tableOfContents">目次へ戻る</a></p><br>
     <section>
       <h3 id="aboutSass">Sassについて</h3>
@@ -122,9 +143,9 @@
       <p>Sassの発音は、設計者であるハンプトン・キャトリンさんご本人の動画を参照ください。<br /><a href="https://www.youtube.com/watch?v=MFwId6xSh2o">The Future of Sass by Hampton Catlin</a></p>
       <p class="back"><a href="#tableOfContents">目次へ戻る</a></p><br>
     </section>
-    <h3 id="installLiveSassCompiler">Live SASS Compilerのインストール</h3>
+    <h3 id="installLiveSassCompiler">Live Sass Compilerのインストール</h3>
     <p class="back"><a href="#tableOfContents">目次へ戻る</a></p><br>
-    <h3 id="sassDescriptionSample">SASSの記述見本</h3>
+    <h3 id="sassDescriptionSample">SCSSの記述見本</h3>
     <p class="back"><a href="#tableOfContents">目次へ戻る</a></p><br>
     <h3 id="emmetReverseLookup">Emmet逆引き</h3>
     <p class="back"><a href="#tableOfContents">目次へ戻る</a></p><br>
