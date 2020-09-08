@@ -14,7 +14,7 @@
   <h3>はじめに</h3>
   <p>このホームページはWeb制作者がmacOSまたはWindows上でコーディングする際にとても便利な、<br /> HTMLとCSSを素早く効率的に書くことが出来るコーディングエディタの拡張機能（プラグイン）であるEmmet（エメット）、
     <br /> そしてCSSを効率的に記述するためのスタイルシート言語であるSass（サース）について解説するものです。<br /><br />
-    専門的と思われる語句の説明には<a href="https://ja.m.wikipedia.org/wiki/%E3%82%A6%E3%82%A3%E3%82%AD%E3%83%9A%E3%83%87%E3%82%A3%E3%82%A2
+    専門的と思われる語句の説明に<a href="https://ja.m.wikipedia.org/wiki/%E3%82%A6%E3%82%A3%E3%82%AD%E3%83%9A%E3%83%87%E3%82%A3%E3%82%A2
     ">ウィキペディア</a>へのリンクを貼ってあります。
   </p>
   <h3 id="tableOfContents">目次</h3>
@@ -25,7 +25,7 @@
       <li>
         <a href="#recomendSourceCodeEditor">ソースコードエディタについて</a></li>
       <li>
-        <a href="#emmetSettingForJapanese">ソースコードエディタのインストールとEmmetの設定</a></li>
+        <a href="#editorInstallAndEmmetSettingForJapanese">ソースコードエディタのインストールとEmmetの設定</a></li>
       <li>
         <a href="#aboutSass">Sassについて</a></li>
       <li>
@@ -36,15 +36,15 @@
         <a href="#emmetReverseLookup">Emmet逆引き</a></li>
       <li>
         <a href="#cssPropertiesColorKeywords">CSS プロパティ カラーネーム</a></li>
-  </nav>
+  </nav><br />
   <article>
     <h3 id="aboutEmmet">Emmetについて</h3>
     <p>EmmetとはHTMLやCSSなどを記述する際に単純な形式の記述を展開することによって素早く編集することができる、ソースコードエディタ用のプラグインです。<br /> また、エディタによっては初めからEmmetが組み込まれているものもあります。<br />
       <a href="https://emmet.io/">Emmet公式サイト</a>
       <br />
-      <br /> Emmetの具体的な例を二つ紹介します。<br />
+      <br /> Emmetの具体的な例を２つ紹介します。<br />
     </p>
-    <ul>
+    <ol>
       <li>
         <p>エディタの<b>HTML編集モード</b>で次のコードを記述してEnter（エディタによってはTab）キーを押すと、</p>
         <pre><code>div#page&gt;div+ul&gt;li*5&gt;a</code></pre>
@@ -76,18 +76,17 @@
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
       </li>
-    </ul><br>
+    </ol><br>
     <p class="back"><a href="#tableOfContents">目次へ戻る</a></p><br>
     <h3 id="recomendSourceCodeEditor">ソースコードエディタについて</h3>
     <p><a href="https://ja.m.wikipedia.org/wiki/%E3%82%BD%E3%83%BC%E3%82%B9%E3%82%B3%E3%83%BC%E3%83%89%E3%82%A8%E3%83%87%E3%82%A3%E3%82%BF">ソースコードエディタ</a>とは、プログラマがプログラムのソースコードを編集することを目的として設計されたテキストエディタプログラムです。</p>
     <p>Emmetは様々なソースコードエディタにインストール出来るプラグインが用意されています。<br />
       <a href="https://emmet.io/download/">Emmetプラグインのダウンロードページ</a><br /> Visual Studio Code（通称VSCode）には標準でEmmetが組み込まれています。<br /> 
-      ここからはVisual Studio Codeを使用して説明を進めていきます。<br />
+      ここからはVSCodeを使用して説明を進めていきますが、<br />
       VSCodeは人気のあるソースコードエディタの中で使い心地がよく筆者が愛用している、
       <br /> というだけなので素晴らしいEmmet対応のソースコードエディタは他にもあります。
       <br> 現在人気のあるEmmet対応のソースコードエディタの中で無料のものを３つ挙げます。<br />
-      ３つともmacOS、Windows、Linuxで使用することが出来ます。
-      <br>
+      ３つともmacOS、Windows、Linuxでコーディングすることが出来ます。<br>
     </p>
     <ul>
       <li>Visual Studio Code</li>
@@ -106,11 +105,20 @@
     <br />
     <br />
     <p class="back"><a href="#tableOfContents">目次へ戻る</a></p>
-    <h3 id="emmetSettingForJapanese">Visual Studio CodeのインストールとEmmetの設定</h3>
+    <h3 id="editorInstallAndEmmetSettingForJapanese">VSCodeのインストールとEmmetの設定</h3>
       <ol type = "1">
         <li>インストール</li>
-        <a href="https://code.visualstudio.com/download">Visual Studio Code</a><br>
+        <p>次のリンク先からあなたがお使いのOSにあったファイルをダウンロードすることが出来ます。<br>
+          <a href="https://code.visualstudio.com/download">Visual Studio Code</a><br>macOSの場合は、ダウンロードしたファイルをダブルクリックして開き、Visual Studio Codeをアプリケーションフォルダへドラッグ＆ドロップします。<br /><br />Windowsの場合は、Installerをダウンロードすることをおすすめします。<br />使用しているパソコンがあなたが占有しているものなら、System Installerを、複数の人で共有しているのなら、User Installerをダウンロードします。<br />ダウンロードしたInstallerを起動し、指示に従ってインストールします。<br /></p>
         <li>Emmetのlang設定</li>
+        <p>Emmetの具体的な例の2.で紹介しましたコードの2行目が、<br /><pre><code>&lt;html lang="en"&gt;</code></pre>になっています。<br />これは、HTMLの言語設定（lang=Languageの略）を英語（en=Englishの略）にする、ということですが、<br />日本語用のHTMLを記述する場合、この部分を毎回、<pre><code>&lt;html lang="ja"&gt;</code></pre>日本語（ja=Jpaneseの略）に手動で書き換える必要があります。<br />ここでは、VSCodeの設定にEmmetの変数を指定することで、自動で<pre><code>&lt;html lang="ja"&gt;</code></pre>にする方法を紹介します。<br /><br />VSCodeを起動してキーボードからCtrl+,を入力します。<br />検索窓にvariablesと入力します。<br /><u>Edit settings.json</u>をクリックしてJSONファイルを開きます。<br />ファイルに何も書かれていない場合は次のコードをコピー＆ペーストしてファイルを保存します。<br /><pre><code>{  // Emmetの言語変数を日本語に
+  "emmet.variables": {
+    "Lang": "ja"
+  }
+}</code></pre><br />ファイルにすでに何か書いてある場合は、最初の{の後ろに次のコードをコピー＆ペーストしてファイルを保存します。<br /><pre><code>// Emmetの言語変数を日本語に
+  "emmet.variables": {
+  "Lang": "ja"
+},</code></pre></p>
       </ol>
       <br>
       <!-- 
