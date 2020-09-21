@@ -3,8 +3,9 @@
 
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Emmet &amp; Sass Coding for Web Creators</title>
-  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
@@ -35,7 +36,7 @@
         <a href="#sassDescriptionSample">Sassの記述見本</a></li>
         
       <li>
-        <a href="#cssPropertiesColorKeywords">CSS プロパティ カラーネーム</a></li>
+        <a href="#cssColorNames">CSS カラーネーム</a></li>
   </nav><br />
   <article>
     <section>
@@ -48,23 +49,16 @@
     <ol>
       <li>
         <p>エディタの<b>HTML編集モード</b>で次のコードを記述してEnter（エディタによってはTab）キーを押すと、</p>
-        <pre><code>div#page&gt;div+ul&gt;li*5&gt;a</code></pre>
-        <p>次のHTMLに展開されます。</pre>
-          <pre><code>&lt;div id="page"&gt;
-  &lt;div&gt;&lt;/div&gt;
-  &lt;ul&gt;
-    &lt;li&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;&gt;li&gt;
-    &lt;li&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;&gt;li&gt;
-    &lt;li&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;&gt;li&gt;
-    &lt;li&gt;&lt;a href="">&lt;&gt;a&gt;&lt;&gt;li&gt;
-    &lt;li&gt;&lt;a href="">&lt;&gt;a&gt;&lt;&gt;li&gt;
-  &lt;/ul&gt;
-&lt;/div&gt;</code>
-</pre><br></li>
+        <pre><code>section&gt;h2+p&gt;a</code></pre>
+        <p>次のHTMLに展開されます。</p>
+          <pre><code>&lt;section&gt;
+  &lt;h2&gt;&lt;/h2&gt;
+  &lt;p&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/section&gt;</code></pre><br></li>
       <li>
         <p>エディタの<b>HTML編集モード</b>で次のコードを記述してEnter（エディタによってはTab）キーを押すと、</p>
         <pre><code>!</code></pre>
-        <p>次のHTMLに展開されます。</pre>
+        <p>次のHTMLに展開されます。</p>
           <pre><code>&lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
 &lt;head&gt;
@@ -114,9 +108,9 @@
       <ol type = "1">
         <li>インストール</li>
         <p>次のリンク先からあなたがお使いのOSにあったファイルをダウンロードすることが出来ます。<br>
-          <a href="https://code.visualstudio.com/download">Visual Studio Code</a><br>macOSの場合は、ダウンロードしたファイルをダブルクリックして開き、Visual Studio Codeをアプリケーションフォルダへドラッグ＆ドロップします。<br /><br />Windowsの場合は、Installerをダウンロードすることをおすすめします。<br />使用しているパソコンがあなたが占有しているものなら、System Installerを、複数の人で共有しているのなら、User Installerをダウンロードします。<br />ダウンロードしたInstallerを起動し、指示に従ってインストールします。<br /></p>
+          <a href="https://code.visualstudio.com/download">Visual Studio Code</a><br><br />macOSの場合は、ダウンロードしたファイルをダブルクリックして開き、Visual Studio Codeをアプリケーションフォルダへドラッグ＆ドロップします。<br /><br />Windowsの場合は、Installerをダウンロードすることをおすすめします。<br />使用しているパソコンがあなたが占有しているものなら、System Installerを、複数の人で共有しているのなら、User Installerをダウンロードします。<br />ダウンロードしたInstallerを起動し、指示に従ってインストールします。<br /></p>
         <li>Emmetのlang設定</li>
-        <p>Emmetの具体的な例の2.で紹介しましたコードの2行目が、<br /><pre><code>&lt;html lang="en"&gt;</code></pre>になっています。<br />これは、HTMLの言語設定（lang=Languageの略）を英語（en=Englishの略）にする、ということなのですが、<br />日本語用のHTMLを記述する場合、この部分を毎回、<pre><code>&lt;html lang="ja"&gt;</code></pre>日本語（ja=Jpaneseの略）に手動で書き換える必要があります。<br />ここでは、VSCodeの設定にEmmetの変数を指定することで、自動で<pre><code>&lt;html lang="ja"&gt;</code></pre>にする方法を紹介します。<br /><br />VSCodeを起動してキーボードからCtrl+,を入力します。<br />検索窓にvariablesと入力します。<br /><u>Edit settings.json</u>をクリックしてJSONファイルを開きます。<br />ファイルに何も書かれていない場合は次のコードをコピー＆ペーストしてファイルを保存します。<br /><pre><code>{  // Emmetの言語変数を日本語に
+        <p>Emmetの具体的な例の2.で紹介しましたコードの2行目が、<br /><pre><code>&lt;html lang="en"&gt;</code></pre>になっています。<br />これは、HTMLの言語設定を英語にする、ということなのですが、<br />日本語用のHTMLを記述する場合、この部分を毎回、<pre><code>&lt;html lang="ja"&gt;</code></pre>日本語に手動で書き換える必要があります。<br />ここでは、VSCodeの設定にEmmetの変数を指定することで、自動で<pre><code>&lt;html lang="ja"&gt;</code></pre>にする方法を紹介します。<br /><br />（lang=Languageの略、en=Englishの略、ja=Japaneseの略）<br /><br />VSCodeを起動してキーボードからCtrl+,を入力します。<br />検索窓にvariablesと入力します。<br /><u>Edit settings.json</u>をクリックして<a href="https://ja.wikipedia.org/wiki/JavaScript_Object_Notation">JSON</a>ファイルを開きます。<br />ファイルに何も書かれていない場合は次のコードをコピー＆ペーストしてファイルを保存します。<br /><pre><code>{  // Emmetの言語変数を日本語に
   "emmet.variables": {
     "Lang": "ja"
   }
@@ -125,7 +119,7 @@
   "Lang": "ja"
 },</code></pre></p>
       </ol>
-      <br>
+      <br />
       <!-- 
         <li>Atom</li>
       <ol type = "1">
@@ -153,6 +147,10 @@
     </section>
     <section>
       <h3 id="emmetReverseLookup">Emmet逆引き</h3>
+      <ul>
+        <li><a href="./emmet/html.html">HTML</a></li>
+        <li><a href="./emmet/css.html">CSS</a></li>
+      </ul>
       <p class="back"><a href="#tableOfContents">目次へ戻る</a></p><br>
     </section>
     <section>
@@ -161,13 +159,16 @@
       <p>Sassの発音は、設計者であるハンプトン・キャトリンさんご本人の動画を参照ください。<br /><a href="https://www.youtube.com/watch?v=MFwId6xSh2o">The Future of Sass by Hampton Catlin</a></p>
       <p class="back"><a href="#tableOfContents">目次へ戻る</a></p><br>
     </section>
-    <h3 id="installLiveSassCompiler">Live Sass Compilerのインストール</h3>
-    <p class="back"><a href="#tableOfContents">目次へ戻る</a></p><br>
-    <h3 id="sassDescriptionSample">SCSSの記述見本</h3>
-    <p class="back"><a href="#tableOfContents">目次へ戻る</a></p><br>
-    
     <section>
-      <h3 id="cssPropertiesColorKeywords">CSS プロパティ カラーネーム</h3>
+          <h3 id="installLiveSassCompiler">Live Sass Compilerのインストール</h3>
+          <p class="back"><a href="#tableOfContents">目次へ戻る</a></p><br>
+    </section>
+    <section>
+          <h3 id="sassDescriptionSample">SCSSの記述見本</h3>
+          <p class="back"><a href="#tableOfContents">目次へ戻る</a></p><br>
+    </section>
+    <section>
+      <h3 id="cssColorNames" カラーネーム</h3>
 
       <section>
         <h4>基本色</h4>
@@ -179,7 +180,9 @@
       <p class="back"><a href="#tableOfContents">目次へ戻る</a></p><br>
     </section>
   </article>
-
+<aside>
+  
+</aside>
   <footer>
     <address><a href="mailto:hiroyasu.kameo@email.com">Hiroyasu Kameo</a></address>
     <p><small>Copyright&copy; 2020　Hiroyasu Kameo, All Rights Reserved.</small></p>

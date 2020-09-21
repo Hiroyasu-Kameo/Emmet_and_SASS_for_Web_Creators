@@ -24,7 +24,7 @@ h3 {
   color: chocolate;
 }
 
-ul {
+ul, ol {
   font-family: 'M PLUS Rounded 1c', sans-serif;
   color: darkcyan;
 }
@@ -41,4 +41,12 @@ footer {
 
 .back {/*目次へ戻る*/
   text-align: right;
+}
+
+.large {
+  font-size: large;
+}
+
+.emmet {
+  color: red;
 }
