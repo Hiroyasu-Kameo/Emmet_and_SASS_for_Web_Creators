@@ -6,15 +6,16 @@
     <link rel="stylesheet" href="../css/style.css" />
 </head>
 <body>
-  <header><p class="large">入れ子からあがる</p></header>
-  <p class="emmet"></p>
-    <pre><code>&lt;header&gt;&lt;header/&gt;
-&lt;article&gt;&lt;article/&gt;
-&lt;footer&gt;&lt;footer/&gt;</code></pre>
-  <p class="emmet">section+section+section</p>
-  <pre><code>&lt;section&gt;&lt;section/&gt;
-&lt;section&gt;&lt;section/&gt;
-&lt;section&gt;&lt;section/&gt;</code></pre>
-
+  <header><p class="large">入れ子から上がる</p></header>
+  <p class="emmet">header+article>section>p^section>p</p>
+<pre><code>&lt;header&gt;&lt;/header&gt;
+&lt;article&gt;
+  &lt;section&gt;
+    &lt;p&gt;&lt;/p&gt;
+  &lt;/section&gt;
+&lt;section&gt;
+  &lt;p&gt;&lt;/p&gt;
+  &lt;/section&gt;
+&lt;/article&gt;</code></pre>
 </body>
 </html>
