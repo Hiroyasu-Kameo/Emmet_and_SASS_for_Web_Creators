@@ -32,7 +32,7 @@
         <a href="#emmetReverseLookup">Emmet逆引き</a>
       </li>
       <li>
-        <a href="#CopyAndPasteTemplate">Copy&amp;Paste用HTMLテンプレート</a>
+        <a href="#CopyAndPasteTemplate">コピー＆ペースト用HTMLテンプレート</a>
       </li>
       <li>
         <a href="#aboutSass">Sassについて</a>  
@@ -41,7 +41,7 @@
         <a href="#installLiveSassCompiler">Live Sass Compilerのインストール</a>
       </li>
       <li>
-        <a href="#sassDescriptionSample">Sassの記述見本</a>  
+        <a href="#sassDescriptionSample">Sassの記述見本とLive Sass Compilerの使い方</a>  
       </li>  
       <li>
         <a href="#cssColorNames">CSS カラーネーム</a>
@@ -86,7 +86,7 @@
     </section>
     <section>
       <h3 id="recomendSourceCodeEditor">ソースコードエディタについて</h3>
-    <p><a href="https://ja.m.wikipedia.org/wiki/%E3%82%BD%E3%83%BC%E3%82%B9%E3%82%B3%E3%83%BC%E3%83%89%E3%82%A8%E3%83%87%E3%82%A3%E3%82%BF">ソースコードエディタ</a>とは、プログラマがプログラムのソースコードを編集することを目的として設計されたテキストエディタプログラムです。</p>
+    <p><a href="https://ja.m.wikipedia.org/wiki/%E3%82%BD%E3%83%BC%E3%82%B9%E3%82%B3%E3%83%BC%E3%83%89%E3%82%A8%E3%83%87%E3%82%A3%E3%82%BF">ソースコードエディタ</a>とは、プログラマがプログラムの<a href="https://ja.wikipedia.org/wiki/ソースコード">ソースコード</a>を編集することを目的として設計されたテキストエディタプログラムです。</p>
     <p>Emmetは様々なソースコードエディタにインストール出来るプラグインが用意されています。<br />
       <a href="https://emmet.io/download/">Emmetプラグインのダウンロードページ</a><br /> Visual Studio Code（通称VSCode）には標準でEmmetが組み込まれています。<br /> 
       ここからはVSCodeを使用して説明を進めていきますが、<br />
@@ -120,11 +120,11 @@
         <p>次のリンク先からあなたがお使いのOSにあったファイルをダウンロードすることが出来ます。<br>
           <a href="https://code.visualstudio.com/download">Visual Studio Code</a><br><br />macOSの場合は、ダウンロードしたファイルをダブルクリックして開き、Visual Studio Codeをアプリケーションフォルダへドラッグ＆ドロップします。<br /><br />Windowsの場合は、Installerをダウンロードすることをおすすめします。<br />使用しているパソコンがあなたが占有しているものなら、System Installerを、複数の人で共有しているのなら、User Installerをダウンロードします。<br />ダウンロードしたInstallerを起動し、指示に従ってインストールします。<br /></p>
         <li>Emmetのlang設定</li>
-        <p>Emmetの具体的な例の2.で紹介しましたコードの2行目が、<br /><pre><code>&lt;html lang="en"&gt;</code></pre>になっています。<br />これは、HTMLの言語設定を英語にする、ということなのですが、<br />日本語用のHTMLを記述する場合、この部分を毎回、<pre><code>&lt;html lang="ja"&gt;</code></pre>日本語に手動で書き換える必要があります。<br />ここでは、VSCodeの設定にEmmetの変数を指定することで、自動で<pre><code>&lt;html lang="ja"&gt;</code></pre>にする方法を紹介します。<br /><br />（lang=Languageの略、en=Englishの略、ja=Japaneseの略）<br /><br />VSCodeを起動してキーボードからCtrl+,を入力します。<br />検索窓にvariablesと入力します。<br /><u>Edit settings.json</u>をクリックして<a href="https://ja.wikipedia.org/wiki/JavaScript_Object_Notation">JSON</a>ファイルを開きます。<br />ファイルに何も書かれていない場合は次のコードをコピー＆ペーストしてファイルを保存します。<br /><pre><code>{  // Emmetの言語変数を日本語に
+        <p>Emmetの具体的な例の2.で紹介しましたコードの2行目が、<br /><pre><code>&lt;html lang="en"&gt;</code></pre>になっています。<br />これは、HTMLの言語設定を英語にする、ということなのですが、<br />日本語用のHTMLを記述する場合、この部分を毎回、<pre><code>&lt;html lang="ja"&gt;</code></pre>に手動で書き換える必要があります。<br />ここでは、VSCodeの設定にEmmetの変数を指定することで、自動で<pre><code>&lt;html lang="ja"&gt;</code></pre>にする方法を紹介します。<br /><br />（lang=Languageの略、en=Englishの略、ja=Japaneseの略）<br /><br />VSCodeを起動してキーボードからCtrl+,を入力します。<br />検索欄に variables と入力します。<br /><u>Edit settings.json</u>をクリックして<a href="https://ja.wikipedia.org/wiki/JavaScript_Object_Notation">JSON</a>ファイルを開きます。<br />ファイルに何も書かれていない場合は次のコードをコピー＆ペーストしてファイルを保存します。<br /><pre><code>{  // Emmetの言語変数を日本語に
   "emmet.variables": {
     "Lang": "ja"
   }
-}</code></pre><br />ファイルにすでに何か書いてある場合は、最初の{の後ろに次のコードをコピー＆ペーストしてファイルを保存します。<br /><pre><code>// Emmetの言語変数を日本語に
+}</code></pre><br />ファイルにすでに何か書いてある場合は、<span class="underline">最初</span>の{の後ろに次のコードをコピー＆ペーストしてファイルを保存します。<br /><pre><code>// Emmetの言語変数を日本語に
   "emmet.variables": {
   "Lang": "ja"
 },</code></pre></p>
@@ -142,7 +142,7 @@
       <p class="back"><a href="#tableOfContents">目次へ戻る</a></p><br>
     </section>
     <section>
-      <h3 id="CopyAndPasteTemplate">Cpoy&Paste用HTMLテンプレート</h3>
+      <h3 id="CopyAndPasteTemplate">コピー＆ペースト用HTMLテンプレート</h3>
         <ul>
           <li>
             <a href=""></a>
@@ -164,17 +164,32 @@
     </section>
     <section>
           <h3 id="installLiveSassCompiler">Live Sass Compilerのインストール</h3>
+          <p>VSCodeを起動して、macOSの場合は、Shift+Command+Xを、Windowsの場合は、Shift+Windowsキー+Xを押します。<br />
+            検索欄に Live Sass Compiler と入力してEnterを押します。<br />
+            リストの１番上に Live Sass Compiler が表示されるので、Installをクリックします。<br />
+          </p>
           <p class="back"><a href="#tableOfContents">目次へ戻る</a></p><br>
     </section>
     <section>
-          <h3 id="sassDescriptionSample">SCSSの記述見本</h3>
+          <h3 id="sassDescriptionSample">SCSSの記述見本とLive Sass Compilerの使い方</h3>
+          <p>Sassには２種類の記述方法があります。<br />
+            現在、主流になっているのが、SCSS記法（ファイルの拡張子はscss）です。<br />
+            そして、もう一つは、SASS記法（ファイルの拡張子はsass）です。<br />
+            <ul>
+              <li>SCSS記法</li>
+              <pre><code></code></pre>
+              <li>SASS記法</li>
+              <pre><code></code></pre>
+            </ul>
+            
+          </p>
           <p class="back"><a href="#tableOfContents">目次へ戻る</a></p><br>
     </section>
     <section>
       <h3 id="cssColorNames">カラーネーム</h3>
 <ol>
-  <li><a href="bace.html">基本色</a></li>
-  <li><a href="extended.html">拡張色</a></li>
+  <li><a href="./color/bace.html">基本色</a></li>
+  <li><a href="./color/extended.html">拡張色</a></li>
 </ol>
       <p class="back"><a href="#tableOfContents">目次へ戻る</a></p><br>
     </section>
