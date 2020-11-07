@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sassの記述見本</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <section>
+    <header><p class="large">SASS記法</p></header>
+    <p>変数</p>
+    <ul class="horizontal">
+      <li><p>SASS</p><pre><code>$font-stack:    Helvetica, sans-serif
+$primary-color: black
+
+body
+  font: 100% $font-stack
+color: $primary-color</code></pre></li><li><p>CSS</p>
+  <pre><code>body {
+  font: 100% Helvetica, sans-serif;
+  color: black;
+}</code></pre></li>
+    </ul><br />
+    <p>入れ子</p>
+    <ul class="horizontal">
+      <li><pre><code>nav
+  ul
+    margin: 0
+    padding: 0
+    list-style: none
+
+  li
+    display: inline-block
+
+  a
+    display: block
+    padding: 6px 12px
+  text-decoration: none</code></pre></li>
+      <li>
+        <pre><code>nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+nav li {
+  display: inline-block;
+}
+nav a {
+  display: block;
+  padding: 6px 12px;
+  text-decoration: none;
+}</code></pre>
+      </li>
+    </ul>
+</section>
+</body>
+</html>
