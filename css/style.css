@@ -69,3 +69,10 @@ footer {
   color: #404040;
   text-align: center;
 }
+
+.horizontal {
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+}
