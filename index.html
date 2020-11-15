@@ -1,82 +1,82 @@
 <!doctype html>
 <html lang="ja">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Emmet &amp; Sass Coding for Web Creators</title>
-  <link rel="stylesheet" href="./css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emmet &amp; Sass Coding for Web Creators</title>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
+
 <body>
-  <header>
-    <h1>Emmet &amp; Sass Coding for Web Creators</h1>
-  </header>
-  <h3>はじめに</h3>
-  <p>このホームページはWeb制作者がmacOSまたはWindows上でコーディングする際にとても便利な、<br /> HTMLとCSSを素早く効率的に書くことが出来るコーディングエディタのプラグイン（拡張機能）であるEmmet（エメット）、
-    <br /> そしてCSSを効率的に記述するためのスタイルシート言語であるSass（サース）について解説するものです。<br /><br />
-    ※専門的と思われる語句の説明に<a href="https://ja.m.wikipedia.org/wiki/%E3%82%A6%E3%82%A3%E3%82%AD%E3%83%9A%E3%83%87%E3%82%A3%E3%82%A2
+    <header>
+        <h1>Emmet &amp; Sass Coding for Web Creators</h1>
+    </header>
+    <h3>はじめに</h3>
+    <p>このホームページはWeb制作者がmacOSまたはWindows上でコーディングする際にとても便利な、<br> HTMLとCSSを素早く効率的に書くことが出来るコーディングエディタのプラグイン（拡張機能）であるEmmet（エメット）、
+        <br> そしてCSSを効率的に記述するためのスタイルシート言語であるSass（サース）について解説するものです。<br><br> ※専門的と思われる語句の説明に
+        <a href="https://ja.m.wikipedia.org/wiki/%E3%82%A6%E3%82%A3%E3%82%AD%E3%83%9A%E3%83%87%E3%82%A3%E3%82%A2
     ">ウィキペディア</a>へのリンクを貼ってあります。
-  </p>
-  <h3 id="tableOfContents">目次</h3>
-  <nav>
-    <ul>
-      <li>
-        <a href="#aboutEmmet">Emmetについて</a></li>
-      <li>
-        <a href="#recomendSourceCodeEditor">ソースコードエディタについて</a></li>
-      <li>
-        <a href="#editorInstallAndEmmetSettingForJapanese">ソースコードエディタのインストールとEmmetの設定</a> 
-      </li>  
-      <li>
-        <a href="#emmetReverseLookup">Emmet逆引き</a>
-      </li>
-      <li>
-        <a href="#copyAndPasteTemplate">コピー＆ペースト用HTMLテンプレート</a>
-      </li>
-      <li>
-        <a href="#aboutSass">Sassについて</a>  
-      </li>
-      <li>  
-        <a href="#installLiveSassCompiler">Live Sass Compilerのインストール</a>
-      </li>
-      <li>
-        <a href="#sassDescriptionSample">Sassの記述見本とCSSへの変換方法</a>  
-      </li>  
-      <li>
-        <a href="#cssColorNames">CSS カラーネーム</a>
-      </li>
-    </ul>   
-  </nav><br />
-  <article>
-    <section>
-      <h3 id="aboutEmmet">Emmetについて</h3>
-    <p>EmmetとはHTMLやCSSなどを記述する際に単純な形式の記述を展開することによって素早く編集することができる、ソースコードエディタ用のプラグインです。<br /> また、エディタによっては初めからEmmetが組み込まれているものもあります。<br />
-      <a href="https://emmet.io/">Emmet公式サイト</a>
-      <br />
-      <br /> Emmetの具体的な例を２つ紹介します。<br />
     </p>
-    <ol>
-    <p>HTML編集モードとは：<br />
-      <p>
-      ソースコードエディタ（これから挙げるVSCodeやAtomなど）では、<br />
-      新規書類を開いたときのモードがプレーンテキスト編集モードになっています。<br />
-      編集画面の右下に Plain Text とありますので、そこをクリックして、<br />
-      検索欄に HTML と入力してEnterキーを押します。<br />
-      HTML編集モードにすることでエディタが入力されたテキストをHTMLと認識します。<br />
-      </p>
-    </p>
-      <li>
-        <p>エディタの<span class="underline">HTML編集モード</span>で次のコードを記述してEnter（エディタによってはTab）キーを押すと、</p>
-        <pre><code>section&gt;h2+p&gt;a</code></pre>
-        <p>次のHTMLに展開されます。</p>
-          <pre><code>&lt;section&gt;
+    <h3 id="tableOfContents">目次</h3>
+    <nav>
+        <ul>
+            <li>
+                <a href="#aboutEmmet">Emmetについて</a></li>
+            <li>
+                <a href="#recomendSourceCodeEditor">ソースコードエディタについて</a></li>
+            <li>
+                <a href="#editorInstallAndEmmetSettingForJapanese">ソースコードエディタのインストールとEmmetの設定</a>
+            </li>
+            <li>
+                <a href="#emmetReverseLookup">Emmet逆引き</a>
+            </li>
+            <li>
+                <a href="#copyAndPasteTemplate">コピー＆ペースト用HTMLテンプレート</a>
+            </li>
+            <li>
+                <a href="#aboutSass">Sassについて</a>
+            </li>
+            <li>
+                <a href="#installLiveSassCompiler">Live Sass Compilerのインストール</a>
+            </li>
+            <li>
+                <a href="#sassDescriptionSample">Sassの記述見本とCSSへの変換方法</a>
+            </li>
+            <li>
+                <a href="#cssColorNames">CSS カラーネーム</a>
+            </li>
+        </ul>
+    </nav><br>
+    <article>
+        <section>
+            <h3 id="aboutEmmet">Emmetについて</h3>
+            <p>EmmetとはHTMLやCSSなどを記述する際に単純な形式の記述を展開することによって素早く編集することができる、ソースコードエディタ用のプラグインです。<br> また、エディタによっては初めからEmmetが組み込まれているものもあります。<br>
+                <a href="https://emmet.io/">Emmet公式サイト</a>
+                <br>
+                <br> Emmetの具体的な例を２つ紹介します。<br>
+            </p>
+            <ol>
+                <p>HTML編集モードとは：<br>
+                    <p>
+                        ソースコードエディタ（これから挙げるVSCodeやAtomなど）では、<br> 新規書類を開いたときのモードがプレーンテキスト編集モードになっています。
+                        <br> 編集画面の右下に Plain Text とありますので、そこをクリックして、<br> 検索欄に HTML と入力してEnterキーを押します。<br> HTML編集モードにすることでエディタが入力されたテキストをHTMLと認識します。
+                        <br>
+                    </p>
+                </p>
+                <li>
+                    <p>エディタの<span class="underline">HTML編集モード</span>で次のコードを記述してEnter（エディタによってはTab）キーを押すと、</p>
+                    <pre><code>section&gt;h2+p&gt;a</code></pre>
+                    <p>次のHTMLに展開されます。</p>
+                    <pre><code>&lt;section&gt;
   &lt;h2&gt;&lt;/h2&gt;
   &lt;p&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;/section&gt;</code></pre><br></li>
-      <li>
-        <p>エディタの<span class="underline">HTML編集モード</span>で次のコードを記述してEnter（エディタによってはTab）キーを押すと、</p>
-        <pre><code>!</code></pre>
-        <p>次のHTMLに展開されます。</p>
-          <pre><code>&lt;!DOCTYPE html&gt;
+                <li>
+                    <p>エディタの<span class="underline">HTML編集モード</span>で次のコードを記述してEnter（エディタによってはTab）キーを押すと、</p>
+                    <pre><code>!</code></pre>
+                    <p>次のHTMLに展開されます。</p>
+                    <pre><code>&lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
 &lt;head&gt;
   &lt;meta charset="UTF-8"&gt;
@@ -87,112 +87,112 @@
 
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
-      </li>
-    </ol><br>
-    <p class="back"><a href="#tableOfContents">目次へ戻る</a></p><br>
-    </section>
-    <section>
-      <h3 id="recomendSourceCodeEditor">ソースコードエディタについて</h3>
-    <p><a href="https://ja.m.wikipedia.org/wiki/%E3%82%BD%E3%83%BC%E3%82%B9%E3%82%B3%E3%83%BC%E3%83%89%E3%82%A8%E3%83%87%E3%82%A3%E3%82%BF">ソースコードエディタ</a>とは、プログラマがプログラムの<a href="https://ja.wikipedia.org/wiki/ソースコード">ソースコード</a>を編集することを目的として設計されたテキストエディタプログラムです。</p>
-    <p>Emmetは様々なソースコードエディタにインストール出来るプラグインが用意されています。<br />
-      <a href="https://emmet.io/download/">Emmetプラグインのダウンロードページ</a><br /> Visual Studio Code（通称VSCode）には標準でEmmetが組み込まれています。<br /> 
-      ここからはVSCodeを使用して説明を進めていきますが、<br />
-      VSCodeは人気のあるソースコードエディタの中で使い心地がよく筆者が愛用している、
-      <br /> というだけなので素晴らしいEmmet対応のソースコードエディタは他にもあります。
-      <br> 現在人気のあるEmmet対応のソースコードエディタの中で無料のものを３つ挙げます。<br />
-      ３つともmacOS、Windows、Linuxでコーディングすることが出来ます。<br>
-    </p>
-    <ul>
-      <li>Visual Studio Code</li>
-      <p>Microsoftが開発したソースコードエディタです。<br />
-        <a href="https://code.visualstudio.com/download">ダウンロード</a>
-      </p><br />
-      <li>Atom</li>
-      <p><a href="https://ja.m.wikipedia.org/wiki/GitHub">GitHub</a>が開発したオープンソースのテキストエディタです。<br />
-        <a href="https://atom.io">ダウンロード</a>
-      </p><br />
-      <li>Brackets</li>
-      <p>Adobe Systemsが開発するオープンソースのソースコードエディタです。<br />
-        <a href="http://brackets.io">ダウンロード</a>
-      </p><br />
-    </ul>
-<!-- 
+                </li>
+            </ol><br>
+            <p class="back"><a href="#tableOfContents">目次へ戻る</a></p><br>
+        </section>
+        <section>
+            <h3 id="recomendSourceCodeEditor">ソースコードエディタについて</h3>
+            <p><a href="https://ja.m.wikipedia.org/wiki/%E3%82%BD%E3%83%BC%E3%82%B9%E3%82%B3%E3%83%BC%E3%83%89%E3%82%A8%E3%83%87%E3%82%A3%E3%82%BF">ソースコードエディタ</a>とは、プログラマがプログラムの<a href="https://ja.wikipedia.org/wiki/ソースコード">ソースコード</a>を編集することを目的として設計されたテキストエディタプログラムです。</p>
+            <p>Emmetは様々なソースコードエディタにインストール出来るプラグインが用意されています。<br>
+                <a href="https://emmet.io/download/">Emmetプラグインのダウンロードページ</a><br> Visual Studio Code（通称VSCode）には標準でEmmetが組み込まれています。<br> ここからはVSCodeを使用して説明を進めていきますが、
+                <br> VSCodeは人気のあるソースコードエディタの中で使い心地がよく筆者が愛用している、
+                <br> というだけなので素晴らしいEmmet対応のソースコードエディタは他にもあります。
+                <br> 現在人気のあるEmmet対応のソースコードエディタの中で無料のものを３つ挙げます。<br> ３つともmacOS、Windows、Linuxでコーディングすることが出来ます。
+                <br>
+            </p>
+            <ul>
+                <li>Visual Studio Code</li>
+                <p>Microsoftが開発したソースコードエディタです。<br>
+                    <a href="https://code.visualstudio.com/download">ダウンロード</a>
+                </p><br>
+                <li>Atom</li>
+                <p><a href="https://ja.m.wikipedia.org/wiki/GitHub">GitHub</a>が開発したオープンソースのテキストエディタです。<br>
+                    <a href="https://atom.io">ダウンロード</a>
+                </p><br>
+                <li>Brackets</li>
+                <p>Adobe Systemsが開発するオープンソースのソースコードエディタです。<br>
+                    <a href="http://brackets.io">ダウンロード</a>
+                </p><br>
+            </ul>
+            <!--
     <p>また、伝統的なソースコードエディタには<a href="https://www.vim.org/download.php">Vim</a>、そして<a href="https://www.gnu.org/software/emacs/download.html">Emacs</a>がありますが、<br> このどちらかのエディタを使いこなしておられる方は、このコンテンツで学ぶことは何もないでしょう。<br>
     </p>
     -->
-    <br />
-    <br />
-    <p class="back"><a href="#tableOfContents">目次へ戻る</a></p><br />
-    </section>
-    <section>
-      <h3 id="editorInstallAndEmmetSettingForJapanese">VSCodeのインストールとEmmetの設定</h3>
-      <ol type = "1">
-        <li>インストール</li>
-        <p>次のリンク先からあなたがお使いのOSにあったファイルをダウンロードすることが出来ます。<br>
-          <a href="https://code.visualstudio.com/download">Visual Studio Code</a><br><br />macOSの場合は、ダウンロードしたファイルをダブルクリックして開き、Visual Studio Codeをアプリケーションフォルダへドラッグ＆ドロップします。<br /><br />Windowsの場合は、Installerをダウンロードすることをおすすめします。<br />使用しているパソコンがあなたが占有しているものなら、System Installerを、複数の人で共有しているのなら、User Installerをダウンロードします。<br />ダウンロードしたInstallerを起動し、指示に従ってインストールします。<br /></p>
-        <li>Emmetのlang設定</li>
-        <p>Emmetの具体的な例の2.で紹介しましたコードの2行目が、<br /><pre><code>&lt;html lang="en"&gt;</code></pre>になっています。<br />これは、HTMLの言語設定を英語にする、ということなのですが、<br />日本語用のHTMLを記述する場合、この部分を毎回、<pre><code>&lt;html lang="ja"&gt;</code></pre>に手動で書き換える必要があります。<br />ここでは、VSCodeの設定にEmmetの変数を指定することで、自動で<pre><code>&lt;html lang="ja"&gt;</code></pre>にする方法を紹介します。<br /><br />（lang=Languageの略、en=Englishの略、ja=Japaneseの略）<br /><br />VSCodeを起動してキーボードからCtrl+,を入力します。<br />検索欄に variables と入力します。<br /><u>Edit settings.json</u>をクリックして<a href="https://ja.wikipedia.org/wiki/JavaScript_Object_Notation">JSON</a>ファイルを開きます。<br />ファイルに何も書かれていない場合は次のコードをコピー＆ペーストしてファイルを保存します。<br /><pre><code>{  // Emmetの言語変数を日本語に
+            <br>
+            <br>
+            <p class="back"><a href="#tableOfContents">目次へ戻る</a></p><br>
+        </section>
+        <section>
+            <h3 id="editorInstallAndEmmetSettingForJapanese">VSCodeのインストールとEmmetの設定</h3>
+            <ol type="1">
+                <li>インストール</li>
+                <p>次のリンク先からあなたがお使いのOSにあったファイルをダウンロードすることが出来ます。<br>
+                    <a href="https://code.visualstudio.com/download">Visual Studio Code</a><br><br>macOSの場合は、ダウンロードしたファイルをダブルクリックして開き、Visual Studio Codeをアプリケーションフォルダへドラッグ＆ドロップします。<br><br>Windowsの場合は、Installerをダウンロードすることをおすすめします。<br>使用しているパソコンがあなたが占有しているものなら、System
+                    Installerを、複数の人で共有しているのなら、User Installerをダウンロードします。<br>ダウンロードしたInstallerを起動し、指示に従ってインストールします。<br></p>
+                <li>Emmetのlang設定</li>
+                <p>Emmetの具体的な例の2.で紹介しましたコードの2行目が、<br><pre><code>&lt;html lang="en"&gt;</code></pre>になっています。<br>これは、HTMLの言語設定を英語にする、ということなのですが、<br>日本語用のHTMLを記述する場合、この部分を毎回、<pre><code>&lt;html lang="ja"&gt;</code></pre>に手動で書き換える必要があります。<br>ここでは、VSCodeの設定にEmmetの変数を指定することで、自動で<pre><code>&lt;html lang="ja"&gt;</code></pre>にする方法を紹介します。<br><br>（lang=Languageの略、en=Englishの略、ja=Japaneseの略）<br><br>VSCodeを起動してキーボードからCtrl+,を入力します。<br>検索欄に
+                    variables と入力します。<br><u>Edit settings.json</u>をクリックして<a href="https://ja.wikipedia.org/wiki/JavaScript_Object_Notation">JSON</a>ファイルを開きます。<br>ファイルに何も書かれていない場合は次のコードをコピー＆ペーストしてファイルを保存します。<br><pre><code>{  // Emmetの言語変数を日本語に
   "emmet.variables": {
     "Lang": "ja"
   }
-}</code></pre><br />ファイルにすでに何か書いてある場合は、<span class="underline">最初</span>の{の後ろに次のコードをコピー＆ペーストしてファイルを保存します。<br /><pre><code>// Emmetの言語変数を日本語に
+}</code></pre><br>ファイルにすでに何か書いてある場合は、<span class="underline">最初</span>の{の後ろに次のコードをコピー＆ペーストしてファイルを保存します。<br><pre><code>// Emmetの言語変数を日本語に
   "emmet.variables": {
   "Lang": "ja"
 },</code></pre></p>
-      </ol>
-      <br />
-      
-      <p class="back"><a href="#tableOfContents">目次へ戻る</a></p><br>
-    </section>
-    <section>
-      <h3 id="emmetReverseLookup">Emmet逆引き</h3>
-      <ul>
-        <li><a href="./emmet/html.html">HTML</a></li>
-        <li><a href="./emmet/css.html">CSS</a></li>
-      </ul>
-      <p class="back"><a href="#tableOfContents">目次へ戻る</a></p><br>
-    </section>
-    <section>
-      <h3 id="copyAndPasteTemplate">コピー＆ペースト用HTMLテンプレート</h3>
-        <ul>
-          <li>
-            <a href="./template/html5.html">HTML5 オーソドックス</a>
-          </li>
-          <li>
-            <a href="./template/nav.html">HTML5 ナビゲーション</a>
-          </li>
-          <li>
-            <a href=""></a>
-          </li>
-        </ul>
-      <p class="back"><a href="#tableOfContents">目次へ戻る</a></p><br>
-    </section>
-    <section>
-      <h3 id="aboutSass">Sassについて</h3>
-      <p>Sass(サース、サス)：<strong>S</strong>yntactically <strong>A</strong>wesome <strong>S</strong>tyle <strong>s</strong>heets（構文的に素晴らしいスタイルシート）とは、<br />CSSを効率的に書くことができるCSS拡張<a href="https://ja.wikipedia.org/wiki/メタ言語">メタ言語</a>です。</p><p><a href="https://sass-lang.com/">Sass公式サイト</a></p><br />
-      <p>Sassの発音は、設計者であるハンプトン・キャトリンさんご本人の動画を参照ください。<br /><a href="https://www.youtube.com/watch?v=MFwId6xSh2o">The Future of Sass by Hampton Catlin</a></p>
-      <p class="back"><a href="#tableOfContents">目次へ戻る</a></p><br>
-    </section>
-    <section>
-          <h3 id="installLiveSassCompiler">Live Sass Compilerのインストール</h3>
-          <p>VSCodeを起動して、macOSの場合は、Shift+Command+Xを、Windowsの場合は、Shift+Windowsキー+Xを押します。<br />
-            検索欄に Live Sass Compiler と入力してEnterを押します。<br />
-            リストの１番上に Live Sass Compiler が表示されるので、Installをクリックします。<br />
-          </p>
-          <p class="back"><a href="#tableOfContents">目次へ戻る</a></p><br>
-    </section>
-    <section>
-          <h3 id="sassDescriptionSample">Sassの記述見本とCSSへの変換方法</h3>
-          <p>Sassには２種類の記述方法があります。<br />
-            現在、主流になっているのが、SCSS記法（ファイルの拡張子はscss）です。<br />
-            そして、もう一つは、SASS記法（ファイルの拡張子はsass）です。<br />
+            </ol>
+            <br>
+
+            <p class="back"><a href="#tableOfContents">目次へ戻る</a></p><br>
+        </section>
+        <section>
+            <h3 id="emmetReverseLookup">Emmet逆引き</h3>
             <ul>
-              <li><a href="./sass/scss.html">SCSS記法</a></li>
-              <pre><code></code></pre>
-              <li><a href="./sass/sass.html">SASS記法</a></li>
-              <pre><code>
+                <li><a href="./emmet/html.html">HTML</a></li>
+                <li><a href="./emmet/css.html">CSS</a></li>
             </ul>
-            
+            <p class="back"><a href="#tableOfContents">目次へ戻る</a></p><br>
+        </section>
+        <section>
+            <h3 id="copyAndPasteTemplate">コピー＆ペースト用HTMLテンプレート</h3>
+            <ul>
+                <li>
+                    <a href="./template/html5.html">HTML5 オーソドックス</a>
+                </li>
+                <li>
+                    <a href="./template/nav.html">HTML5 ナビゲーション</a>
+                </li>
+                <li>
+                    <a href=""></a>
+                </li>
+            </ul>
+            <p class="back"><a href="#tableOfContents">目次へ戻る</a></p><br>
+        </section>
+        <section>
+            <h3 id="aboutSass">Sassについて</h3>
+            <p>Sass(サース、サス)：<strong>S</strong>yntactically <strong>A</strong>wesome <strong>S</strong>tyle <strong>s</strong>heets（構文的に素晴らしいスタイルシート）とは、<br>CSSを効率的に書くことができるCSS拡張<a href="https://ja.wikipedia.org/wiki/メタ言語">メタ言語</a>です。</p>
+            <p><a href="https://sass-lang.com/">Sass公式サイト</a></p><br>
+            <p>Sassの発音は、設計者であるハンプトン・キャトリンさんご本人の動画を参照ください。<br><a href="https://www.youtube.com/watch?v=MFwId6xSh2o">The Future of Sass by Hampton Catlin</a></p>
+            <p class="back"><a href="#tableOfContents">目次へ戻る</a></p><br>
+        </section>
+        <section>
+            <h3 id="installLiveSassCompiler">Live Sass Compilerのインストール</h3>
+            <p>VSCodeを起動して、macOSの場合は、Shift+Command+Xを、Windowsの場合は、Shift+Windowsキー+Xを押します。<br> 検索欄に Live Sass Compiler と入力してEnterを押します。<br> リストの１番上に Live Sass Compiler が表示されるので、Installをクリックします。<br>
+            </p>
+            <p class="back"><a href="#tableOfContents">目次へ戻る</a></p><br>
+        </section>
+        <section>
+            <h3 id="sassDescriptionSample">Sassの記述見本とCSSへの変換方法</h3>
+            <p>Sassには２種類の記述方法があります。<br> 現在、主流になっているのが、SCSS記法（ファイルの拡張子はscss）です。
+                <br> そして、もう一つは、SASS記法（ファイルの拡張子はsass）です。
+                <br>
+                <ul>
+                    <li><a href="./sass/scss.html">SCSS記法</a></li>
+                    <pre><code></code></pre>
+                    <li><a href="./sass/sass.html">SASS記法</a></li>
+                    <pre><code>
+            </ul>
+
           </p>
           <p class="back"><a href="#tableOfContents">目次へ戻る</a></p><br>
     </section>
@@ -206,7 +206,7 @@
     </section>
   </article>
 <aside>
-  
+
 </aside>
   <footer>
     <address><a href="mailto:hiroyasu.kameo@example.com">Hiroyasu Kameo</a></address>

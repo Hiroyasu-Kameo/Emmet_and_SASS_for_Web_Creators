@@ -2,44 +2,46 @@
 @import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
+
 body {
   background-image: url(../img/paper.jpg);
 }
 
 h1 {
   font-family: 'Lato', sans-serif;
-  color: royalblue;
+  color: RoyalBlue;
 }
 
 p {
   font-family: 'M PLUS Rounded 1c', sans-serif;
-  color: darkcyan;
+  color: DarkCyan;
 }
 
 code {
-  color: darkslateblue;
+  color: DarkSlateBlue;
 }
 
 h3 {
   font-family: 'M PLUS Rounded 1c', sans-serif;
-  color: chocolate;
+  color: Chocolate;
 }
 
 ul, ol {
   font-family: 'M PLUS Rounded 1c', sans-serif;
-  color: darkcyan;
+  color: DarkCyan;
 }
 
 h4 {
   font-family: Consolas, 'Courier New', monospace;
-  color: cornflowerblue;
+  color: CornflowerBlue;
 }
 
 footer {
   text-align: center;
 }
 
-.back {/*目次へ戻る*/
+.back {/*目次へ*/
   text-align: right;
 }
 
@@ -59,9 +61,14 @@ footer {
   text-align: center;
 }
 
+.fixed-width {
+  font-family: 'Inconsolata', monospace;
+  font-size: 1.2em;
+}
+
 .headline {
   font-family: 'M PLUS Rounded 1c', sans-serif;
-  color: royalblue;
+  color: RoyalBlue;
 }
 
 .name {
