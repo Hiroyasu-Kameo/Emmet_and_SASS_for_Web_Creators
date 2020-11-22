@@ -2,83 +2,56 @@
 <html lang="ja">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Emmet &amp; Sass Coding for Web Creators</title>
-    <link rel="stylesheet" href="./css/style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Emmet &amp; Sass Coding for Web Creators</title>
+  <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
-    <header>
-        <h1>Emmet &amp; Sass Coding for Web Creators</h1>
-    </header>
+  <header><h1>Emmet &amp; Sass Coding for Web Creators</h1></header>
+  <section>
     <h3>はじめに</h3>
-    <p>このホームページはWeb制作者がmacOSまたはWindows上でコーディングする際にとても便利な、<br> HTMLとCSSを素早く効率的に書くことが出来るコーディングエディタのプラグイン（拡張機能）であるEmmet（エメット）、
-        <br> そしてCSSを効率的に記述するためのスタイルシート言語であるSass（サース）について解説するものです。<br><br> ※専門的と思われる語句の説明に
-        <a href="https://ja.m.wikipedia.org/wiki/%E3%82%A6%E3%82%A3%E3%82%AD%E3%83%9A%E3%83%87%E3%82%A3%E3%82%A2
-    ">ウィキペディア</a>へのリンクを貼ってあります。
+    <p>このホームページはWeb制作者がmacOSまたはWindows上でコーディングする際にとても便利な、<br> HTMLとCSSを素早く効率的に書くことが出来るコーディングエディタのプラグイン（拡張機能）であるEmmet（エメット）、<br>そしてCSSを効率的に記述するためのスタイルシート言語であるSass（サース）について解説するものです。<br><br>※専門的と思われる語句の説明に<a href="https://ja.m.wikipedia.org/wiki%E3%82%A6%E3%82%A3%E3%82%AD%E3%83%9A%E3%83%87%E3%82%A3%E3%82%A2">ウィキペディア</a>へのリンクを貼ってあります。<br>
     </p>
-    <h3 id="tableOfContents">目次</h3>
+  </section>
+  <h3 id="tableOfContents">目次</h3>
     <nav>
-        <ul>
-            <li>
-                <a href="#aboutEmmet">Emmetについて</a></li>
-            <li>
-                <a href="#recomendSourceCodeEditor">ソースコードエディタについて</a></li>
-            <li>
-                <a href="#editorInstallAndEmmetSettingForJapanese">Visual Studio CodeのインストールとEmmetの設定</a>
-            </li>
-            <li>
-                <a href="#recommendedPlugins">Visual Studio Code おすすめプラグイン</a></li>
-            <li>
-                <a href="#emmetReverseLookup">Emmet逆引き</a>
-            </li>
-            <li>
-                <a href="#copyAndPasteTemplate">コピー＆ペースト用HTMLテンプレート</a>
-            </li>
-            <li>
-                <a href="#aboutSass">Sassについて</a>
-            </li>
-            <li>
-                <a href="#installLiveSassCompiler">Live Sass Compilerのインストール</a>
-            </li>
-            <li>
-                <a href="#sassDescriptionSample">Sassの記述見本とCSSへの変換方法</a>
-            </li>
-            <li>
-                <a href="#cssColorNames">CSS カラーネーム</a>
-            </li>
-        </ul>
-    </nav><br>
-    <article>
-        <section>
-            <h3 id="aboutEmmet">Emmetについて</h3>
-            <p>EmmetとはHTMLやCSSなどを記述する際に単純な形式の記述を展開することによって素早く編集することができる、ソースコードエディタ用のプラグインです。<br> また、エディタによっては初めからEmmetが組み込まれているものもあります。<br>
-                <a href="https://emmet.io/">Emmet公式サイト</a>
-                <br>
-                <br> Emmetの具体的な例を２つ紹介します。<br>
-            </p>
-            <ol>
-                <p>HTML編集モードとは：<br>
-                    <p>
-                        ソースコードエディタ（これから挙げるVSCodeやAtomなど）では、<br> 新規書類を開いたときのモードがプレーンテキスト編集モードになっています。
-                        <br> 編集画面の右下に Plain Text とありますので、そこをクリックして、<br> 検索欄に HTML と入力してEnterキーを押します。<br> HTML編集モードにすることでエディタが入力されたテキストをHTMLと認識します。
-                        <br>
-                    </p>
-                </p>
-                <li>
-                    <p>エディタの<span class="underline">HTML編集モード</span>で次のコードを記述してEnter（エディタによってはTab）キーを押すと、</p>
-                    <pre><code>section&gt;h2+p&gt;a</code></pre>
-                    <p>次のHTMLに展開されます。</p>
-                    <pre><code>&lt;section&gt;
+      <ul>
+        <li><a href="#aboutEmmet">Emmetについて</a></li>
+        <li><a href="#recomendSourceCodeEditor">ソースコードエディタについて</a></li>
+        <li><a href="#editorInstallAndEmmetSettingForJapanese">Visual Studio CodeのインストールとEmmetの設定</a></li>
+        <li><a href="#recommendedPlugins">Visual Studio Code おすすめプラグイン</a></li>
+        <li><a href="#emmetReverseLookup">Emmet逆引き</a></li>
+        <li><a href="#copyAndPasteTemplate">コピー＆ペースト用テンプレート</a></li>
+        <li><a href="#aboutSass">Sassについて</a></li>
+        <li><a href="#installLiveSassCompiler">Live Sass Compilerのインストール</a></li>
+        <li><a href="#sassDescriptionSample">Sassの記述見本とCSSへの変換方法</a></li>
+        <li><a href="#cssColorNames">CSS カラーネーム</a></li>
+      </ul>
+    </nav>
+    <br>
+  <article>
+    <section>
+      <h3 id="aboutEmmet">Emmetについて</h3>
+        <p>EmmetとはHTMLやCSSなどを記述する際に単純な形式の記述を展開することによって素早く編集することができる、ソースコードエディタ用のプラグインです。<br>また、エディタによっては初めからEmmetが組み込まれているものもあります。<br><a href="https://emmet.io/">Emmet公式サイト</a><br><br>Emmetの具体的な例を２つ紹介します。<br></p>
+        <ol>
+          <p>HTML編集モードとは：<br></p>
+          <p>ソースコードエディタ（これから挙げるVSCodeやAtomなど）では、<br>新規書類を開いたときのモードがプレーンテキスト編集モードになっています。<br>編集画面の右下に Plain Text とありますので、そこをクリックして、<br> 検索欄に HTML と入力してEnterキーを押します。<br>HTML編集モードにすることでエディタが入力されたテキストをHTMLと認識します。<br></p>
+          <li>
+            <p>エディタの<span class="underline">HTML編集モード</span>で次のコードを記述してEnter（エディタによってはTab）キーを押すと、</p>
+            <pre><code>section&gt;h2+p&gt;a</code></pre>
+            <p>次のHTMLに展開されます。</p>
+            <pre><code>&lt;section&gt;
   &lt;h2&gt;&lt;/h2&gt;
   &lt;p&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;/section&gt;</code></pre><br></li>
-                <li>
-                    <p>エディタの<span class="underline">HTML編集モード</span>で次のコードを記述してEnter（エディタによってはTab）キーを押すと、</p>
-                    <pre><code>!</code></pre>
-                    <p>次のHTMLに展開されます。</p>
-                    <pre><code>&lt;!DOCTYPE html&gt;
+&lt;/section&gt;</code></pre><br>
+            </li>
+            <li>
+              <p>エディタの<span class="underline">HTML編集モード</span>で次のコードを記述してEnter（エディタによってはTab）キーを押すと、</p>
+              <pre><code>!</code></pre>
+              <p>次のHTMLに展開されます。</p>
+              <pre><code>&lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
 &lt;head&gt;
   &lt;meta charset="UTF-8"&gt;
@@ -118,9 +91,9 @@
                 </p><br>
             </ul>
             <!--
-    <p>また、伝統的なソースコードエディタには<a href="https://www.vim.org/download.php">Vim</a>、そして<a href="https://www.gnu.org/software/emacs/download.html">Emacs</a>がありますが、<br> このどちらかのエディタを使いこなしておられる方は、このコンテンツで学ぶことは何もないでしょう。<br>
-    </p>
-    -->
+            <p>また、伝統的なソースコードエディタには<a href="https://www.vim.org/download.php">Vim</a>、そして<a href="https://www.gnu.org/software/emacs/download.html">Emacs</a>がありますが、<br> このどちらかのエディタを使いこなしておられる方は、このコンテンツで学ぶことは何もないでしょう。<br>
+            </p>
+            -->
             <br>
             <br>
             <p class="back"><a href="#tableOfContents">目次へ戻る</a></p><br>
@@ -150,13 +123,17 @@
         <section>
           <h3 id="recommendedPlugins">Visual Studio Code おすすめプラグイン</h3>
           <ul>
-            <li>Japanese Language Pack</li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
+            <li>Japanese Language Pack（VSCodeの日本語化）</li>
+            <li>Blacket Pair Colorizer 2</li>
+            <li>Path Autocomplete（パスの入力補完）</li>
+            <li>Prettier（コードの自動整形）</li>
+            <li>Auto Rename Tag（タグ名を変更するときに閉じタグ名も自動で変更）</li>
+            <li>HTML CSS Support（clas名、id名の入力補完）</li>
+            <li>Code Spell Checker（スペルチェック）</li>
           </ul>
+          <p>プラグインのインストール方法<br><br>VSCodeを起動した状態で、macOSの場合は、Shift+Command+Xを、Windowsの場合は、Shift+Windowsキー+Xを押します。<br>検索欄にプラグインの名前を入力してEnterを押します。<br>リストの１番上にプラグインの名前が表示されるので、Installをクリックします。<br>
+          </p>
+          <p class="back"><a href="#tableOfContents">目次へ戻る</a></p><br>
         </section>
         <section>
             <h3 id="emmetReverseLookup">Emmet逆引き</h3>
@@ -167,7 +144,7 @@
             <p class="back"><a href="#tableOfContents">目次へ戻る</a></p><br>
         </section>
         <section>
-            <h3 id="copyAndPasteTemplate">コピー＆ペースト用HTMLテンプレート</h3>
+            <h3 id="copyAndPasteTemplate">コピー＆ペースト用テンプレート</h3>
             <ul>
                 <li>
                     <a href="./template/html5.html">HTML5 オーソドックス</a>
@@ -192,39 +169,34 @@
             <h3 id="installLiveSassCompiler">Live Sass Compilerのインストール</h3>
             <p>VSCodeを起動して、macOSの場合は、Shift+Command+Xを、Windowsの場合は、Shift+Windowsキー+Xを押します。<br> 検索欄に Live Sass Compiler と入力してEnterを押します。<br> リストの１番上に Live Sass Compiler が表示されるので、Installをクリックします。<br>
             </p>
-            <p class="back"><a href="#tableOfContents">目次へ戻る</a></p><br>
-        </section>
-        <section>
-            <h3 id="sassDescriptionSample">Sassの記述見本とCSSへの変換方法</h3>
-            <p>Sassには２種類の記述方法があります。<br> 現在、主流になっているのが、SCSS記法（ファイルの拡張子はscss）です。
-                <br> そして、もう一つは、SASS記法（ファイルの拡張子はsass）です。
-                <br>
-                <ul>
-                    <li><a href="./sass/scss.html">SCSS記法</a></li>
-                    <pre><code></code></pre>
-                    <li><a href="./sass/sass.html">SASS記法</a></li>
-                    <pre><code>
-            </ul>
-
-          </p>
-          <p class="back"><a href="#tableOfContents">目次へ戻る</a></p><br>
-    </section>
-    <section>
-      <h3 id="cssColorNames">CSSカラーネーム</h3>
-<ol>
-  <li><a href="./color/base.html">基本色</a></li>
-  <li><a href="./color/extended.html">拡張色</a></li>
-</ol>
-      <p class="back"><a href="#tableOfContents">目次へ戻る</a></p><br>
-    </section>
-  </article>
+  <p class="back"><a href="#tableOfContents">目次へ戻る</a></p><br>
+  </section>
+  <section>
+    <h3 id="sassDescriptionSample">Sassの記述見本とCSSへの変換方法</h3>
+    <p>Sassには２種類の記述方法があります。<br>現在、主流になっているのが、SCSS記法（ファイルの拡張はscss）です。<br>そして、もう一つは、SASS記法（ファイルの拡張子はsass）です。<br>
+    </p>
+    <ul>
+      <li><a href="./sass/scss.html">SCSS記法</a></li>
+      <li><a href="./sass/sass.html">SASS記法</a></li>
+    </ul>
+    <p class="back"><a href="#tableOfContents">目次へ戻る</a></p><br>
+  </section>
+  <section>
+    <h3 id="cssColorNames">CSSカラーネーム</h3>
+    <ol>
+      <li><a href="./color/base.html">基本色</a></li>
+      <li><a href="./color/extended.html">拡張色</a></li>
+    </ol>
+    <p class="back"><a href="#tableOfContents">目次へ戻る</a></p><br>
+  </section>
+</article>
 <aside>
 
 </aside>
-  <footer>
+<footer>
+    <p><!--<small>このホームページのコードは<a href="https://google.github.io/styleguide/htmlcssguide.html">Google HTML/CSS Style Guide</a>に沿って記述されています。</small></p>-->
     <address><a href="mailto:hiroyasu.kameo@example.com">Hiroyasu Kameo</a></address>
     <p><small>Copyright&copy; 2020　Hiroyasu Kameo, All Rights Reserved.</small></p>
-  </footer>
+</footer>
 </body>
-
 </html>
