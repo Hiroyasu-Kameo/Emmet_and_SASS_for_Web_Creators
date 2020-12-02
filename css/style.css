@@ -14,12 +14,20 @@ h1 {
 }
 
 p {
-  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-family: 'M PLUS Rounded 1c',sans-serif;
   color: DarkCyan;
 }
 
 code {
   color: DarkSlateBlue;
+}
+
+a {
+  color: ForestGreen;
+}
+
+a:visited {
+  color: DarkBlue;
 }
 
 h3 {
