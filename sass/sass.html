@@ -51,7 +51,80 @@ nav a {
   text-decoration: none;
 }</code></pre>
       </li>
-    </ul>
+    </ul><br>
+      <p>ミックスイン</p>
+      <ul class="horizontal">
+        <li><p>SASS</p>
+          <pre><code>=transform($property)
+  -webkit-transform: $property
+  -ms-transform: $property
+  transform: $property
+.box
++transform(rotate(30deg))</code></pre>
+        </li>
+        <li><p>CSS</p>
+          <pre><code>.box {
+  -webkit-transform: rotate(30deg);
+  -ms-transform: rotate(30deg);
+  transform: rotate(30deg);
+}</code></pre>
+        </li>
+      </ul><br>
+      <p>拡張/継承</p>
+      <ul class="horizontal">
+        <li><p>SASS</p>
+          <pre><code>/* This CSS will print because %message-shared is extended. */
+%message-shared
+  border: 1px solid #ccc
+  padding: 10px
+  color: #333
+
+
+// This CSS won't print because %equal-heights is never extended.
+%equal-heights
+  display: flex
+  flex-wrap: wrap
+
+
+.message
+  @extend %message-shared
+
+
+.success
+  @extend %message-shared
+  border-color: green
+
+
+.error
+  @extend %message-shared
+  border-color: red
+
+
+.warning
+  @extend %message-shared
+border-color: yellow</code></pre>
+        </li>
+        <li><p>CSS</p>
+          <pre><code>/* This CSS will print because %message-shared is extended. */
+.message, .success, .error, .warning {
+  border: 1px solid #ccc;
+  padding: 10px;
+  color: #333;
+}
+
+.success {
+  border-color: green;
+}
+
+.error {
+  border-color: red;
+}
+
+.warning {
+  border-color: yellow;
+}</code></pre>
+        </li>
+      </ul>
     <p class="back"><a href="../index.html#sassDescriptionSample">目次へ戻る</a></p>
   </section>
 </body>
