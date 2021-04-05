@@ -25,7 +25,6 @@
         <li><a href="#emmetReverseLookup">Emmet逆引き</a></li>
         <li><a href="#copyAndPasteTemplate">コピー＆ペースト用テンプレート</a></li>
         <li><a href="#aboutSass">Sassについて</a></li>
-        <li><a href="#installLiveSassCompiler">Live Sass Compilerのインストール</a></li>
         <li><a href="#sassDescriptionSample">Sassの記述見本とCSSへの変換方法</a></li>
         <li><a href="#cssColorNames">CSS カラーネーム</a></li>
       </ul>
@@ -162,12 +161,6 @@
             <p>Sassの発音は、設計者であるハンプトン・キャトリンさんご本人の動画を参照ください。<br><a href="https://www.youtube.com/watch?v=MFwId6xSh2o">The Future of Sass by Hampton Catlin</a></p>
             <p class="back"><a href="#tableOfContents">目次へ戻る</a></p><br>
         </section>
-        <section>
-            <h3 id="installLiveSassCompiler">Live Sass Compilerのインストール</h3>
-            <p>VSCodeを起動して、macOSの場合は、Shift+Command+Xを、Windowsの場合は、Shift+Windowsキー+Xを押します。<br> 検索欄に Live Sass Compiler と入力してEnterを押します。<br> リストの１番上に Live Sass Compiler が表示されるので、Installをクリックします。<br>
-            </p>
-  <p class="back"><a href="#tableOfContents">目次へ戻る</a></p><br>
-  </section>
   <section>
     <h3 id="sassDescriptionSample">Sassの記述見本とCSSへの変換方法</h3>
     <p>Sassには２種類の記述方法があります。<br>現在、主流になっているのが、SCSS記法（ファイルの拡張はscss）です。<br>そして、もう一つは、SASS記法（ファイルの拡張子はsass）です。<br>
@@ -175,20 +168,21 @@
     <ul>
       <li><a href="./sass/scss.html">SCSS記法</a></li>
       <li><a href="./sass/sass.html">SASS記法</a></li>
-    </ul><br>
+    </ul><br><br>
+    <p>変換方法<br>Webにあるコンパイラー、<a href="http://sass.js.org/">Sass.js</a>を使用します。</p>
     <ul>
       <li>
-        <p>SCSSからCSSへの変換方法<br>
-          VSCodeで新規書類を開き、任意のファイル名の拡張子をscssにして保存します。<br>
-          SCSS記法でコードを記述して出来上がったら、VSCodeの下部にあるWatch Sassをクリックします。<br>
-          正常に終了すると、SCSSファイルを保存したフォルダ内にCSSファイルとマップファイル（拡張子、css.map）が作成されます。
+        <p><span class="underline">SCSS</span>からCSSへの変換方法<br>
+          ウィンドウ内右上の設定（ギヤマーク）をクリックし、indentedSyntax:でfalse（<span class="underline">SCSS</span>）を選択し設定を閉じ、<br>
+          SASS記述欄に<span class="underline">SCSS</span>記法でコードを記述します。<br>
+          下のConvertボタンをクリックすると右側にCSSが表示されます。<br>
+          CSSをコピーしてVSCodeの新規書類にペーストし、CSSファイルとして保存します。
         </p>
       </li>
       <li>
-        <p>SASSからCSSへの変換方法<br>
-          Webにあるコンパイラー、<a href="http://sass.js.org/">Sass.js</a>を使用します。<br>
-          ウィンドウ内右上の設定（ギヤマーク）をクリックし、indentedSyntax:でtrue（SASS）を選択し設定を閉じ、<br>
-          SASS記述欄にSASS記法でコードを記述します。<br>
+        <p><span class="underline">SASS</span>からCSSへの変換方法<br>
+          ウィンドウ内右上の設定（ギヤマーク）をクリックし、indentedSyntax:でtrue（<span class="underline">SASS</span>）を選択し設定を閉じ、<br>
+          SASS記述欄に<span class="underline">SASS</span>記法でコードを記述します。<br>
           下のConvertボタンをクリックすると右側にCSSが表示されます。<br>
           CSSをコピーしてVSCodeの新規書類にペーストし、CSSファイルとして保存します。
         </p>
